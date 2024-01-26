@@ -1,26 +1,38 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
+    margin: 0px;
 }
 
-body > .container{
-    margin: -10px 10% -10px;
-    border: 0;
-    padding: 10px 10% 200px;
-    height: 500px;
-    width: auto;
+/*First section*/
+
+.container{
+    display: grid;
+    column-gap: 70px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px, 500px;
+    margin: 0px;
+    padding: 10px 10% 50px 10%;
     background-color: #1f2937;
 }
 
 Header {
+    grid-column: 1/3;
+    grid-row: 1/2;
     display: flex;
     justify-content: space-between; 
+    margin: 0px 0px 50px 0px;
+}
+
+.header-links{
+    display: flex;
+    justify-content: space-between;
 }
 
 a {
-    margin: 20px;
     color: #F9FAF8;
     text-decoration: none;
+    margin: 0px auto 0px 20px;
 }
 
 .logo {
@@ -28,11 +40,13 @@ a {
     color: #F9FAF8;
 }
 
-.heroMainText p {
+h1 {
     font-size: 48px;
     font-weight: 800;
     color: #F9FAF8;
-    padding: 5px;
+    padding: 0px;
+    margin: 0px;
+    text-wrap: balance;
 }
 
 .heroSecondaryText {
@@ -40,7 +54,7 @@ a {
     color: #e5e7eb;
 }
 
-button {
+.container button {
     background-color: #3882f6;
     color: #F9FAF8;
     width: 130px;
@@ -51,37 +65,163 @@ button {
     border: none;
 }
 
-.hero {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 50px;
-    height: 600px;
-
-}
-
 .hero-left {
+    grid-column: 1/2;
+    grid-row: 2/3;
     display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     text-wrap: balance;
-    width: 50%;
-
+    max-height: 100%;
+    width: 100%;
 }
 
-.hero-right{
+.hero-right {
+    grid-column: 2/3;
+    grid-row: 2/3;
     display: flex;
-    flex 1;
-    flex-direction: row;
+    flex-grow: 1;
+    flex-direction: column;
     justify-content: center;
-    width: 50%;
-
-}
-img {
+    align-items: center;
     background-color: grey;
-    height: 200px; 
-    max-width: auto;
+    height: 100%;
+    width: 90%;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.hero-right p {
+    color: #F9FAF8;
+    line-height: 100%;
+    padding: auto 5%;
+}
+
+/*Second section*/
+
+.container-two {
+    display: block;
+    margin: 0px;
+    padding: 0px 150px 60px;
+    background-color: white;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #1f2937;
+    text-align: center;
+}
+
+.figures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: auto;
+    height: auto;
+}
+
+figure {
+    width: 150px;
+    height: auto;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border: 3.5px solid; 
+    border-radius: 10px;
+    border-color: #3882f6;
+    background-color: white;
+}
+
+figcaption {
+    color: grey;
+    font-size: 16px;
+    text-align: center;
+    text-wrap: wrap;
+    height: auto;
+    width: 100%;
+}
+
+/*Third section*/
+
+.container-three {
+    background-color: #e5e7eb;
+    padding: 150px 20%;
+    margin: 0px;
+}
+
+blockquote {
+    display: block;
+    margin: 0px;
+    font-size: 30px;
+    font-weight: 100;
+    font-style: italic;
+    color: #1f2937;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.quote-signature {
+    font-weight: 800;
+    font-size: 20px;
+    font-style: normal;
+    text-align: right;
+}
+
+/*Fourth section*/
+.container-four {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 15%;
+    padding: 40px 10% 40px 10%;
+    border-radius: 7px;
+    background-color: #3882f6;
+}
+
+
+h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #F9FAF8;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container-four p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #F9FAF8;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container-four button {
+    background-color: #3882f6;
+    color: #F9FAF8;
+    width: 140px;
+    height:40px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 3px solid #F9FAF8;
+    margin: 0px 10px 0px 10px;
+}
+
+/*Footer section*/
+
+footer {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    background-color: #1f2937;
+    color: #F9FAF8;
+    font-size: 12px;
 }
